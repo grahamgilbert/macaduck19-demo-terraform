@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "macaduck19" {
   bucket = "macaduck19"
-  acl    = "private"
+  acl    = "public-read"
 
   server_side_encryption_configuration {
     rule {
@@ -8,6 +8,11 @@ resource "aws_s3_bucket" "macaduck19" {
         sse_algorithm = "AES256"
       }
     }
+  }
+
+  website {
+    index_document = "index.html"
+    error_document = "error.html"
   }
 
   tags {
