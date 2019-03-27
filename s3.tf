@@ -1,6 +1,7 @@
 resource "aws_s3_bucket" "macaduck19" {
-  bucket = "macaduck19"
-  acl    = "public-read"
+  bucket        = "macaduck19"
+  acl           = "public-read"
+  force_destroy = true
 
   server_side_encryption_configuration {
     rule {
