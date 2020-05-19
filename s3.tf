@@ -1,5 +1,5 @@
-resource "aws_s3_bucket" "macaduck19" {
-  bucket        = "macaduck19"
+resource "aws_s3_bucket" "practicalcicd" {
+  bucket        = "practicalcicd"
   acl           = "public-read"
   force_destroy = true
 
@@ -17,7 +17,7 @@ resource "aws_s3_bucket" "macaduck19" {
   }
 
   tags {
-    Name = "macaduck19"
+    Name = "practicalcicd"
   }
 
   versioning {

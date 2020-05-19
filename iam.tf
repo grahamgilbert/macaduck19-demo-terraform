@@ -1,16 +1,16 @@
-resource "aws_iam_user" "macaduck19" {
-  name          = "macaduck19"
+resource "aws_iam_user" "practicalcicd" {
+  name          = "practicalcicd"
   force_destroy = true
 }
 
-resource "aws_iam_policy_attachment" "macaduck19" {
-  name       = "macaduck19"
-  users      = ["${aws_iam_user.macaduck19.name}"]
-  policy_arn = "${aws_iam_policy.macaduck19.arn}"
+resource "aws_iam_policy_attachment" "practicalcicd" {
+  name       = "practicalcicd"
+  users      = ["${aws_iam_user.practicalcicd.name}"]
+  policy_arn = "${aws_iam_policy.practicalcicd.arn}"
 }
 
-resource "aws_iam_policy" "macaduck19" {
-  name = "macaduck19"
+resource "aws_iam_policy" "practicalcicd" {
+  name = "practicalcicd"
 
   policy = <<EOF
 {
@@ -22,7 +22,7 @@ resource "aws_iam_policy" "macaduck19" {
             "s3:List*",
             "s3:Get*"
           ],
-          "Resource": "arn:aws:s3:::macaduck19"
+          "Resource": "arn:aws:s3:::practicalcicd"
         },
         {
           "Effect": "Allow",
@@ -37,7 +37,7 @@ resource "aws_iam_policy" "macaduck19" {
             "s3:PutObject"
           ],
           "Resource": [
-            "arn:aws:s3:::macaduck19/*"
+            "arn:aws:s3:::practicalcicd/*"
           ]
         }
     ]

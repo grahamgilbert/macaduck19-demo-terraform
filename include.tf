@@ -7,6 +7,6 @@ terraform {
     bucket  = "grahamgilbert-terraform"
     region  = "us-east-1"
     encrypt = "true"
-    key     = "macaduck19demo/terraform_state"
+    key     = "practicalcicddemo/terraform_state"
   }
 }
